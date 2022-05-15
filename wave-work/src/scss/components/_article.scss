@@ -1,0 +1,15 @@
+.article-component {
+  background: var(---primaryBg);
+  padding: 40px;
+  border-radius: 5px;
+  border: 2px solid var(---secondaryBg);
+  border-top: 2px solid var(---accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media screen and (max-width: 767px) {
+      padding: 40px 20px;
+  }
+}

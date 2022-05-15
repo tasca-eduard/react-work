@@ -1,0 +1,127 @@
+.table-component {
+  .table {
+    table-layout: fixed;
+    width: 100%;
+    border-radius: 5px;
+    border-spacing: 0;
+
+    .table-head {
+      .data {
+        &:first-of-type {
+          .content {
+            background-image: linear-gradient(to right, var(---primaryBg) 30%, var(---ternaryBg) 70%);
+          }
+        }
+  
+        &:last-of-type {
+          .content {
+            background-image: linear-gradient(to left, var(---primaryBg) 30%, var(---ternaryBg) 70%);
+          }
+        }
+      }  
+    }
+
+    .table-body {
+      .data {
+        padding: 12px 0;
+
+        &:hover,
+        &:focus {
+          .content {
+            background: rgba(var(---secondaryBg), .9) !important;
+          }
+        }
+
+        &:first-of-type {
+          .content {
+            background-image: linear-gradient(to right, var(---primaryBg) 30%, var(---secondaryBg) 70%);
+          }
+        }
+  
+        &:last-of-type {
+          .content {
+            background-image: linear-gradient(to left, var(---primaryBg) 30%, var(---secondaryBg) 70%);
+          }
+        }
+      }  
+
+      .row {
+        &:hover,
+        &:focus {
+          .data {
+            .content {
+              background: rgba(var(---secondaryBg), .9);
+            }
+          }
+        }
+      }
+    }
+
+    .data {
+      padding: 14px 0;
+
+      &:first-of-type {
+        .content {
+          font-weight: 700;
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+          justify-content: flex-start;
+        }
+      }
+
+      &:last-of-type {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+
+        .content {
+          justify-content: flex-end;
+        }
+      }
+
+      &:nth-last-of-type(2) {
+        width: 134px;
+
+        .content {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .amount {
+      font-weight: bold;
+      text-align: center;
+    }
+  
+    .head {
+      .content {
+        color: rgba(var(---primaryText), .8);
+        background: var(---ternaryBg);
+      }
+    }
+  
+    .content {
+      padding: 14px 22px;
+      background: var(---secondaryBg);
+      color: var(---primaryText);
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .1s;
+    }
+  
+    @media screen and (max-width: 960px) {
+      width: auto;
+
+      .data {
+        &:last-of-type {
+          min-width: 200px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    overflow-x: auto;
+  }
+}

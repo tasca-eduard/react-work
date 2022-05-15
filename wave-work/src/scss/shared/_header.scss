@@ -1,0 +1,33 @@
+.header {
+  position: sticky;
+  top: 0;
+  margin-bottom: rem(50px);
+  background: var(---ternaryBg);
+  z-index: 9;
+
+  .header-container {
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+    background: none;
+    padding: 16px 40px;
+  }
+
+  .options {
+    display: flex;
+  }
+
+  .label {
+    & ~ .label {
+      margin-left: 24px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    margin-bottom: rem(20px);
+
+    .header-container {
+      padding-inline: 14px;
+    }
+  }
+}

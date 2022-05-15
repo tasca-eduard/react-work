@@ -1,0 +1,68 @@
+.container {
+  max-width: 1340px;
+  width: 100%;
+  margin: 0 auto 60px;
+  padding: 30px 40px;
+  --secondaryBg: red;
+  background: var(---secondaryBg);
+  border-radius: 8px;
+  position: relative;
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.neutral {
+    background: none;
+    margin-top: -60px;
+  }
+
+  &.shape {
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(40%, 50%);
+      width: 90%;
+      height: 300%;
+      background: var(---primaryBg);
+      border-radius: 50%;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-inline: 14px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 40px;
+}
+
+.slidish {
+  position: relative;
+
+  &:after,
+  &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      box-shadow: 0 0 15px 15px var(---primaryBg);
+      z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
