@@ -9,13 +9,13 @@
       .data {
         &:first-of-type {
           .content {
-            background-image: linear-gradient(to right, var(---primaryBg) 30%, var(---ternaryBg) 70%);
+            background-image: linear-gradient(to right, var(--primaryBg) 30%, var(--ternaryBg) 70%);
           }
         }
   
         &:last-of-type {
           .content {
-            background-image: linear-gradient(to left, var(---primaryBg) 30%, var(---ternaryBg) 70%);
+            background-image: linear-gradient(to left, var(--primaryBg) 30%, var(--ternaryBg) 70%);
           }
         }
       }  
@@ -25,36 +25,26 @@
       .data {
         padding: 12px 0;
 
+
         &:hover,
         &:focus {
           .content {
-            background: rgba(var(---secondaryBg), .9) !important;
+            background: transparent !important;
           }
         }
 
         &:first-of-type {
           .content {
-            background-image: linear-gradient(to right, var(---primaryBg) 30%, var(---secondaryBg) 70%);
+            background-image: linear-gradient(to right, var(--primaryBg) 30%, var(--secondaryBg) 70%);
           }
         }
   
         &:last-of-type {
           .content {
-            background-image: linear-gradient(to left, var(---primaryBg) 30%, var(---secondaryBg) 70%);
+            background-image: linear-gradient(to left, var(--primaryBg) 30%, var(--secondaryBg) 70%);
           }
         }
       }  
-
-      .row {
-        &:hover,
-        &:focus {
-          .data {
-            .content {
-              background: rgba(var(---secondaryBg), .9);
-            }
-          }
-        }
-      }
     }
 
     .data {
@@ -94,20 +84,20 @@
   
     .head {
       .content {
-        color: rgba(var(---primaryText), .8);
-        background: var(---ternaryBg);
+        color: rgba(var(--primaryText), .8);
+        background: var(--ternaryBg);
       }
     }
   
     .content {
       padding: 14px 22px;
-      background: var(---secondaryBg);
-      color: var(---primaryText);
+      background: var(--secondaryBg);
+      color: var(--primaryText);
       height: 60px;
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: .1s;
+      transition: .2s;
     }
   
     @media screen and (max-width: 960px) {

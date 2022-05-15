@@ -1,9 +1,14 @@
-* {
+*, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  color: var(---primaryText);
+  color: var(--primaryText);
+  transition: 
+    .6s cubic-bezier(0.075, 0.82, 0.165, 1) background, 
+    .6s cubic-bezier(0.075, 0.82, 0.165, 1) color, 
+    .6s cubic-bezier(0.075, 0.82, 0.165, 1) border-color, 
+    .6s cubic-bezier(0.075, 0.82, 0.165, 1) box-shadow;
 }
 
 html {
@@ -14,14 +19,14 @@ html {
 }
 
 .App {
-  background: var(---primaryBg);
+  background: var(--primaryBg);
   padding-bottom: 60px;
 }
 
 hr {
   border: none;
-  border-top: 1px solid rgba(var(---primaryText), .2);
-  max-width: 300px;
+  border-top: 1px solid var(--accent);
+  max-width: 30%;
 }
 
 small {
@@ -43,14 +48,14 @@ small {
     bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(---accent);
+    background: var(--accent);
     border-radius: 50%;
     transition: .2s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   &:hover,
   &:focus-visible {
-    color: var(---primaryText);
+    color: var(--primaryText);
     outline: none;
 
     &::after {

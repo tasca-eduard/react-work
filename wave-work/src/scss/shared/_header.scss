@@ -2,8 +2,9 @@
   position: sticky;
   top: 0;
   margin-bottom: rem(50px);
-  background: var(---ternaryBg);
+  background: var(--ternaryBg);
   z-index: 9;
+  box-shadow: 0 0 10px 4px var(--primaryShadow);
 
   .header-container {
     max-width: 1420px;

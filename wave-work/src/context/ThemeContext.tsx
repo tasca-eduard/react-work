@@ -22,9 +22,16 @@ const ThemeContext = createContext<TThemeContext>({
 });
 
 export const ThemeProvider:React.FC<Props> = ({ children }) => {
-  const [theme, setTheme] = useState<TTheme>("dark") ;
-  const [accent, setAccent] = useState<TAccent>("yellow");
+  const storageTheme = localStorage.getItem("theme");
+  const storageAccent = localStorage.getItem("accent");
+  const [theme, setTheme] = useState<TTheme>(storageTheme as TTheme ?? "dark") ;
+  const [accent, setAccent] = useState<TAccent>(storageAccent as TAccent ?? "yellow");
  
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    localStorage.setItem("accent", accent)
+  }, [theme, accent])
+
   return (
     <ThemeContext.Provider value={{
       theme, setTheme,

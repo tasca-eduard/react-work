@@ -1,24 +1,16 @@
 .App {
   //text
-  ---primaryText: #dddddd;    
   
   //backgrounds
-  ---primaryBg: #1f1f1f;
-  ---secondaryBg: #222222;
-  ---ternaryBg: #1c1c1c;
   
   //forms
-  ---inputBg: var(---secondaryBg);
   
   //details
-  ---primaryBorder: #333333;
-  ---accent: #e6bf3e;
   
   //status
-  ---statusPaidBg: #aed6ae;
-  ---statusPaidText: #379937;
-  ---statusPendingBg: #e7e7a0;
-  ---statusPendingText: #8b8b2a;
-  ---statusUnpaidBg: #eba1a1;
-  ---statusUnpaidText: #a33737;
+
+  //shadow
+
+  //static
+  --black: #000000;
 }

@@ -3,8 +3,7 @@
   width: 100%;
   margin: 0 auto 60px;
   padding: 30px 40px;
-  --secondaryBg: red;
-  background: var(---secondaryBg);
+  background: var(--secondaryBg);
   border-radius: 8px;
   position: relative;
 
@@ -29,7 +28,7 @@
       transform: translate(40%, 50%);
       width: 90%;
       height: 300%;
-      background: var(---primaryBg);
+      background: var(--primaryBg);
       border-radius: 50%;
     }
   }
@@ -58,7 +57,7 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      box-shadow: 0 0 15px 15px var(---primaryBg);
+      box-shadow: 0 0 15px 15px var(--primaryBg);
       z-index: 2;
   }
 

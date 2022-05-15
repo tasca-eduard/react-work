@@ -1,9 +1,9 @@
 .article-component {
-  background: var(---primaryBg);
+  background: var(--primaryBg);
   padding: 40px;
   border-radius: 5px;
-  border: 2px solid var(---secondaryBg);
-  border-top: 2px solid var(---accent);
+  border: 2px solid var(--secondaryBg);
+  border-top: 2px solid var(--accent);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
